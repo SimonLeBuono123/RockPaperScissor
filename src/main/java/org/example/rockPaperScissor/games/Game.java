@@ -93,7 +93,7 @@ public class Game implements GameRepo{
         }
         if(pointsToWin <= computerScore){
             System.out.println("Computer wins");
-            System.out.printf("Result: %s - %s to %s%n", playerScore, computerScore, enemy.getName());
+            System.out.printf("Result: %s - %s to %s%n", computerScore, playerScore, enemy.getName());
             gameTracking.add("Result: %s - %s to %s".formatted(computerScore, playerScore, enemy.getName()));
             GameHistory.addToHistory(gameTracking);
         }

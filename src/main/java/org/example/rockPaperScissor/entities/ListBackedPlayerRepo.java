@@ -10,7 +10,10 @@ public class ListBackedPlayerRepo implements PlayerRepo{
     private static Player activePlayer;
     private static List<Player> playerList = new ArrayList<>(List.of(
             new Player("Johnny", 1000),
-            new Player("Donn", 600)
+            new Player("Donn", 600),
+            new Player("Dwayne the Rock", 700),
+            new Player("Scissorshans", 1010),
+            new Player("Paperier", 800)
     ));
 
     @Override

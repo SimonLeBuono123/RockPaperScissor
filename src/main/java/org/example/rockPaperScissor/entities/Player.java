@@ -21,19 +21,19 @@ public class Player extends Entity{
     }
 
 
-    private void setScore(int score) {
+    private void incrementScore(int score) {
         this.score += score;
     }
 
     public <T extends Enemy>void calculateScore(T enemy){
         if(enemy instanceof Slumpis){
-            this.setScore(50);
+            this.incrementScore(50);
         }
         if(enemy instanceof Klockis){
-            this.setScore(110);
+            this.incrementScore(110);
         }
         if(enemy instanceof Namnis){
-            this.setScore(10);
+            this.incrementScore(10);
         }
     }
 
