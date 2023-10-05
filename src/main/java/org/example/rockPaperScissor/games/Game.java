@@ -37,7 +37,8 @@ public class Game implements GameRepo{
     private final Player player;
     private LocalDate currentDate;
     private int round = 0;
-
+    private int game;
+    private static int gameCounter = 1;
     private final int rock = RPSmoves.ROCK.getMoveValue();
     private final int paper = RPSmoves.PAPER.getMoveValue();
     private final int scissor = RPSmoves.SCISSOR.getMoveValue();
@@ -45,12 +46,14 @@ public class Game implements GameRepo{
         this.enemy = enemy;
         this.player = player;
         this.currentDate = LocalDate.now();
+        this.game = gameCounter++;
     }
 
 
     @Override
     public void play(int pointsToWin) {
         gameTracking = new ArrayList<>();
+        gameTracking.add("%n%nGame %s%n".formatted(game));
         boolean exitGame = true;
          int playerScore = 0;
          int computerScore = 0;

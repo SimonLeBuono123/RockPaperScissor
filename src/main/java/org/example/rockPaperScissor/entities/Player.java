@@ -8,7 +8,7 @@ import org.example.rockPaperScissor.entities.enemies.Slumpis;
 public class Player extends Entity{
     private int score;
     private final int id;
-    private static int idCounter = 0;
+    private static int idCounter = 1;
     public Player(String name, int score){
         super(name);
         this.score = score;
