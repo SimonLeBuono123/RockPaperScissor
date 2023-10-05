@@ -14,14 +14,14 @@ public class GameMenu extends Menu{
     public GameMenu() {
         super("Game Menu");
         menuOptions = List.of(
-                new MenuOption(1, "Play against slumpis", () -> chosenEnemy(1, player)),
-                new MenuOption(2, "Play against Klockis", () -> chosenEnemy(2, player)),
-                new MenuOption(3, "Play against Namnis", () -> chosenEnemy(3, player)),
+                new MenuOption(1, "Play against slumpis", () -> chosenEnemy("slumpis", player)),
+                new MenuOption(2, "Play against Klockis", () -> chosenEnemy("klockis", player)),
+                new MenuOption(3, "Play against Namnis", () -> chosenEnemy("namnis", player)),
                 new MenuOption(0, "Main menu", () -> MenuSystem.setState(new MainMenu()))
         );
     }
 
-    public void chosenEnemy(int enemyType, Player player) {
+    public void chosenEnemy(String enemyType, Player player) {
 
         if(player == null || player.getName().equals("")){
             System.out.println("No player has been chosen," +
