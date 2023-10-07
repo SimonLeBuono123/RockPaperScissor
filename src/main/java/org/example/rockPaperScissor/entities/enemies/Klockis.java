@@ -21,7 +21,7 @@ public class Klockis extends Enemy{
 
     @Override
     public int getMove() {
-        //gets the hour of the day
+        //gets the hour of the day(12 hour)so 13:00 would then be hour 1
         int hour = rightNow.get(Calendar.HOUR);
         if(hour == nextMove){
             nextMove = 0;

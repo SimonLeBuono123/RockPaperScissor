@@ -7,7 +7,7 @@ public abstract class Enemy extends Entity {
         super(name);
     }
     public Enemy(){}
-    //Abstract factory patter
+    // Factory method pattern
     public static Enemy getEnemyType(String choice){
         return switch(choice.toLowerCase()){
             case "slumpis" -> new Slumpis();

@@ -32,7 +32,6 @@ public class Game implements GameRepo{
     private static final Scanner scanner = new Scanner(System.in);
     protected List<String> gameTracking;
     //dependency inversion
-    //composite pattern
     private final Enemy enemy;
     private final Player player;
     private LocalDate currentDate;
